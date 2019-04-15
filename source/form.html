@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="pink-application-head">
+      <img class="pink-application-logo" src="img/logotype-pink.svg" width="75" height="22" alt="Логотип PINK">
+      <img class="pink-application-menu-cross" src="img/menu-cross.svg" width="24" height="23" alt="Крестик для скрытия мобильного меню">
+      <nav class="pink-application-menu">
+        <ul class="pink-application-menu-item">
+          <li class="pink-application-menu-items"><a href="#">Главная</a></li>
+          <li class="pink-application-menu-items"><a href="#">Фотографии</a></li>
+          <li class="pink-application-menu-items"><a href="#">Конкурс</a></li>
+          <li class="pink-application-menu-items"><a href="#">HtmlAcademy</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="pink-application-contest-main">
+      <h1 class="pink-application-title-form">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+      <form class="pink-application-form" action="#" method="POST">
+        <label for="last-name-field">Фамилия</label><input class="pink-form-last-name" type="text" name="last-name" id="last-name-field" placeholder="Укажите фамилию *">
+        <label for="first-name-field">Имя</label><input class="pink-form-first-name" type="text" name="first-name" id="first-name-field" placeholder="Укажите имя *">
+        <label for="middle-name-field">Отчество</label><input class="pink-form-middle-name" type="text" name="middle-name" id="middle-name-field" placeholder="Ну и отчество тоже *">
+        <section class="pink-form-fancy-wins">
+          <p class="pink-form-fancy-title">Ваши безбашенные достижения в путешествии</p>
+          <label for="selfie-for-shark-field">Сделал селфи с акулой</label>
+          <input type="checkbox" name="selfie-for-shark" id="selfie-for-shark-field" class="pink-form-get-selfie" checked>
+          <label for="burnt-onthe-beach-field">Обгорел на пляже</label>
+          <input type="checkbox" name="burnt-onthe-beach" id="burnt-onthe-beach-field" class="pink-form-burnt-beach" checked>
+          <label for="saw-chuck-norris-field">Видел Чака Норриса</label>
+          <input type="checkbox" name="saw-chuck-norris" id="saw-chuck-norris-field" class="pink-form-sow-norris">
+          <label for="sale-presents-field">Накупил сувениров</label>
+          <input type="checkbox" name="sale-presents" id="sale-presents-field" class="pink-form-sale-presents">
+          <label for="kept-the-tower-field">Удержал башню</label>
+          <input type="checkbox" name="kept-the-tower" id="kept-the-tower-field" class="pink-form-kept-tower" checked>
+          <label for="crushed-the-hotel-field">Разгромил отель</label>
+          <input type="checkbox" name="crushed-the-hotel" id="crushed-the-hotel-field" class="pink-form-crushed-hotel">
+        </section>
+        <section class="pink-form-contact">
+          <label for="phone-number-field">Номер телефона</label>
+          <input type="tel" name="phone-number" id="phone-number-field" class="pink-form-phone" placeholder="Номер, пожалуйста">
+          <label for="mail-adress-field">адрес почты</label>
+          <input type="email" name="mail-adress" id="mail-adress-field" placeholder="Введите почту *">
+        </section>
+        <section class="pink-form-os-platform">
+          <p class="pink-form-os-title">С каким приложением путешествовали?</p>
+          <label for="for-ios-field">Pink для iOS</label>
+          <input type="radio" name="for-ios" id="for-ios-field" class="pink-forms-for-ios" checked>
+          <label for="for-android-field">Pink на Android</label>
+          <input type="radio" name="for-android" id="for-android-field" class="pink-form-for-android">
+          <label for="for-windows-field">Windows Phone</label>
+          <input type="radio" name="for-windows" id="for-windows-field" class="pink-form-for-windows">
+        </section>
+        <section class="pink-form-emotions">
+          <label for="describe-emotions-field" class="pink-form-emotions-title">Опишите свои эмоции</label>
+          <textarea name="describe-emotions" id="describe-emotions-field" cols="30" rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
+        </section>
+        <button type="submit" name="submit-data">Отправить форму</button>
+        <p class="form-pointer-set-type">* — обязательные поля</p>
+      </form>
+    </main>
+    <footer class="pink-application-footer">
+      <img src="img/form-img/logotype-blue-tablet.jpg" widht="147" height="40" alt="Логотип сайта" class="pink-application-footer-logo">
+      <ul class="pink-application-footer-social">
+        <li class="pink-application-social-item">Twitter</li>
+        <li class="pink-application-social-item">Facebook</li>
+        <li class="pink-application-social-item">Youtube</li>
+      </ul>
+      <section class="pink-application-logo-academy">
+        <p class="pink-application-developed-title">Разработано</p>
+        <img src="img/form-img/htmlacademy.svg" width="28" height="34" alt="Логотип htmlacademy" class="pink-application-developed-img">
+      </section>
+    </footer>
+  </body>
+</html>
