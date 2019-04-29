@@ -2,20 +2,24 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
+    <title>Главная</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="pink-application-head">
-      <img class="pink-application-logo" src="img/logotype-pink.svg" width="75" height="22" alt="Логотип PINK">
-      <img class="pink-application-menu-cross" src="img/menu-cross.svg" width="24" height="23" alt="Крестик для скрытия мобильного меню">
-      <nav class="pink-application-menu">
-        <ul class="pink-application-menu-item">
-          <li class="pink-application-menu-items"><a href="#">Главная</a></li>
-          <li class="pink-application-menu-items"><a href="#">Фотографии</a></li>
-          <li class="pink-application-menu-items"><a href="#">Конкурс</a></li>
-          <li class="pink-application-menu-items"><a href="#">HtmlAcademy</a></li>
-        </ul>
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="img/logotype-pink.svg" width="75" height="22" alt="Логотип PINK">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" name="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item"><a href="#">Главная</a></li>
+            <li class="site-list__item"><a href="#">Фотографии</a></li>
+            <li class="site-list__item"><a href="#">Конкурс</a></li>
+            <li class="site-list__item"><a href="#">HtmlAcademy</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="pink-application-main">
