@@ -97,15 +97,16 @@
           </figcaption>
         </figure>
       </section>
-      <section class="pink-application-get-post">
-        <img src="img/photo-user/photo-7-mobile.jpg" alt="Природа" width="280" height="374" class="pink-application-image-post">
-        <ul class="pink-application-edit-image">
-          <li class="pink-application-edit-item">Размер</li>
-          <li class="pink-application-edit-item">Заливка</li>
-          <li class="pink-application-edit-item">Яркость</li>
-        </ul>
-        <button class="pink-application-post-button" type="submit">Запостить</button>
-        <button class="pink-application-post-button" type="submit">Отмена</button>
+      <section class="get-post">
+        <p class="get-post__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        <img  class="get-post__image" src="img/photo-user/photo-7-mobile.jpg" alt="Природа" width="280" height="374">
+        <form class="get-post__edit-image" action="#" method="POST">
+          <input class="edit-image__size" type="radio" id="size-field">
+          <input class="edit-image__fill" type="radio" id="fill-field">
+          <input class="edit-image__bright" type="radio" id="bright-field">
+          <button class="get-post__button-yes button" type="submit">Запостить</button>
+          <button class="get-post__button-no button" type="submit">Отмена</button>
+        </form>
       </section>
     </main>
     <footer class="pink-application-footer">
