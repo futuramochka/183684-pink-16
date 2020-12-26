@@ -1,0 +1,32 @@
+@width-button: 260px;
+@width-Text: 87;
+@width-borderLine: 2px;
+
+.button {
+  display: inline-block;
+  height: 52px - @width-borderLine * 2;
+  padding: 0 ((@width-button - @width-Text) / 2 - @width-borderLine);
+
+  line-height: 52px;
+  color: #444444;
+  text-decoration: none;
+
+  background-color: #ffffff;
+  border: @width-borderLine solid #444444;
+  cursor: pointer;
+}
+
+.button__text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  color: #ffffff;
+
+  background-color: #444444;
+}
