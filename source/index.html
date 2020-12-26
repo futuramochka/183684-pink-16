@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -11,19 +12,22 @@
         <img src="img/mishka-logo-mobile.svg.png" width="86" height="35" alt="logotype">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toogle" type="button">
+        <button class="main-nav__toogle toogle" type="button">
+          <div class="toogle__item"></div>
+          <div class="toogle__item"></div>
+          <div class="toogle__item"></div>
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item"><a href="#">Каталог товаров</a></li>
-            <li class="site-list__item"><a href="#">Вязание на заказ</a></li>
-            <li class="site-list__item"><a href="#">Новые поступления</a></li>
-            <li class="site-list__item"><a href="#">Распродажа</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="#">Каталог товаров</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="#">Вязание на заказ</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="#">Новые поступления</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="#">Распродажа</a></li>
           </ul>
           <ul class="main-nav__list user-list">
-            <li class="user-list__item"><a href="#" title="Поиск по сайту">Поиск по сайту</a></li>
-            <li class="user-list__item"><a href="#">Корзина: пока пуста</a></li>
+            <li class="user-list__item"><a class="site-list__link" href="#" title="Поиск по сайту">Поиск по сайту</a></li>
+            <li class="user-list__item"><a class="site-list__link" href="#">Корзина: пока пуста</a></li>
           </ul>
         </div>
       </nav>
@@ -36,8 +40,8 @@
         </div>
         <div class="products-nav__main">
           <ul class="products-nav__list">
-            <li class="products-nav__item"><a href="#">Предметы интерьера</a></li>
-            <li class="products-nav__item"><a href="#">Детские игрушки</a></li>
+            <li class="products-nav__item"><a class="products-nav__link" href="#">Предметы интерьера</a></li>
+            <li class="products-nav__item"><a class="products-nav__link" href="#">Детские игрушки</a></li>
           </ul>
         </div>
       </section>
@@ -58,10 +62,10 @@
           </thead>
           <tbody class="table-options__body">
             <tr class="table-options__body-list">
-              <td class="table-option__body-item">«Тиффани»/серый</td>
-              <td class="table-option__body-item">25 см</td>
-              <td class="table-option__body-item">15 см</td>
-              <td class="table-option__body-item">990 руб.</td>
+              <td class="table-options__body-item">«Тиффани»/серый</td>
+              <td class="table-options__body-item">25 см</td>
+              <td class="table-options__body-item">15 см</td>
+              <td class="table-options__body-item">990 руб.</td>
             </tr>
           </tbody>
         </table>
