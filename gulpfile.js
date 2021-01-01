@@ -12,12 +12,16 @@ var del = require('del');
 var Sync = require('browser-sync').create();
 var sourcemaps = require('gulp-sourcemaps');
 
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+
 //Массив файлов для конкатенации стилей
 var cssFiles = [
     './source/less/style.less'
 ]
 //Массив файлов для конкатинации скриптов
 var scriptFiles = [
+    './source/js/imgsvg.js',
     './source/js/menu.js',
     './source/js/slider.js'
 ]
@@ -66,18 +70,30 @@ function watch(){
 }
 
 //Таск на скрипты
-function scripts(){
+/*function scripts(){
     //Путь откуда берутся скрипты
+    //return browserify('./source/js/imgsvg.js')
     return gulp.src(scriptFiles)
-    //В какой файл склееваются
-    .pipe(concat('script.js'))
-    //Cжатие файла скрипта
-    .pipe(uglify({
-        toplevel: true
-    }))
-    //Путь куда отправляются склеенные файлы
-    .pipe(gulp.dest('./build/js'))
+     //В какой файл склееваются
+     .pipe(concat('script.js'))
+     //Cжатие файла скрипта
+     /*.pipe(babel({
+         presets: ['@babel/preset-env']
+     }))*/
+     /*.pipe(uglify({
+         toplevel: true
+     }))
+     .pipe(uglify().on('error', console.error))
+    .pipe(gulp.dest('./source/build/js/'))
     .pipe(Sync.stream());
+}*/
+
+function scripts(){
+  return browserify('./source/js/imgsvg.js')
+        .bundle()
+        // Передаем имя файла, который получим на выходе, vinyl-source-stream
+        .pipe(source('script.js'))
+        .pipe(gulp.dest('./build/js'));
 }
 
 gulp.task('style', styles);

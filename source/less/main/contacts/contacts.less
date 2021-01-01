@@ -1,15 +1,39 @@
+.contacts {
+  position: relative;
+
+  width: 100%;
+  min-height: 500px;
+  margin-top: 40px;
+}
+
 .contacts__title {
+  position: relative;
+  top: -11px;
+
   margin: 0;
+  margin-bottom: 30px;
+  padding: 0 30px;
 
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
   color: #000000;
+  letter-spacing: 1px;
+}
+
+.contacts__name {
+  position: relative;
+  left: -2px;
 }
 
 .contacts__email,
 .contacts__address {
+  position: relative;
+  top: -27px;
+  left: 2px;
+
   margin: 0;
+  padding-left: 30px;
 
   font-style: normal;
   font-weight: normal;
@@ -18,10 +42,76 @@
   color: #444444;
 }
 
+.contacts__email {
+  position: relative;
+  top: -14px;
+  left: 2px;
+
+  display: flex;
+}
+
+.contacts__address {
+  display: flex;
+  margin-top: 42px;
+  margin-bottom: 65px;
+}
+
+.contacts__text {
+  position: relative;
+  left: 30px;
+
+  width: 183px;
+}
+
+.contacts__link {
+  color: #444444;
+  text-decoration: none;
+}
+
+.contacts__link:hover {
+  color: #46c1ae;
+}
+
+.contacts__email .contacts__text::after {
+  content: "";
+  position: relative;
+  bottom: 5px;
+
+  display: block;
+  width: 179px;
+  height: 1px;
+
+  background-color: #62d1ba;
+}
+
+.contacts__email:hover > .contacts__text::after {
+  background-color: #46c1ae;
+}
+
 .contacts__map {
   width: 320px;
   height: 454.16px;
 
   background-image: url("../img/map-mobile@1x\ 1.svg");
   background-repeat: no-repeat;
+  background-position: 0 -30px;
+}
+
+.contacts__pin {
+  position: absolute;
+  top: 404px;
+  left: 138px;
+}
+
+.contacts__write {
+  position: relative;
+  top: 11px;
+
+  width: 256px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+}
+
+.contacts__write-text {
+  margin-left: 50px;
 }

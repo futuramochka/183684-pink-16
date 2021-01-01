@@ -4,30 +4,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <script src="js/jquery-3.5.1.js"></script>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo logo">
-        <img src="img/mishka-logo-mobile.svg.png" width="86" height="35" alt="logotype">
+        <img class="logo__image" src="img/mishka-logo-mobile.svg.png" width="86" height="35" alt="logotype">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toogle toogle" type="button">
-          <div class="toogle__item"></div>
-          <div class="toogle__item"></div>
-          <div class="toogle__item"></div>
+        <button class="main-nav__toogle toogle js-toogle" type="button">
+          <div class="toogle__item js-toogle--hide"></div>
+          <div class="toogle__item js-toogle--turndown"></div>
+          <div class="toogle__item js-toogle--turnup"></div>
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+          <ul class="main-nav__list site-list js-navMenu">
             <li class="site-list__item"><a class="site-list__link" href="#">Каталог товаров</a></li>
             <li class="site-list__item"><a class="site-list__link" href="#">Вязание на заказ</a></li>
             <li class="site-list__item"><a class="site-list__link" href="#">Новые поступления</a></li>
             <li class="site-list__item"><a class="site-list__link" href="#">Распродажа</a></li>
           </ul>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item"><a class="site-list__link" href="#" title="Поиск по сайту">Поиск по сайту</a></li>
-            <li class="user-list__item"><a class="site-list__link" href="#">Корзина: пока пуста</a></li>
+          <ul class="main-nav__list user-list js-display">
+            <li class="user-list__item">
+              <a class="user-list__link" href="#">
+                <img class="user-list__image img-svg user-list__image--search" width="18" height="18" src="img/search.svg.svg" alt="Поиск">
+                <span class="user-list__text user-list__text--search">Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__link" href="#">
+                <img class="user-list__image img-svg user-list__image--cart" width="21" height="18" src="img/cart.svg.svg" alt="Корзина">
+                <span class="user-list__text user-list__text--cart">Корзина: пока пуста</span>
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -36,62 +47,74 @@
     <main class="page-main">
       <section class="products-nav">
         <div class="products-nav__header">
-          <h1 class="products-nav__title">Милые штуки ручной работы для дома</h1>
+          <h1 class="products-nav__title">Милые штуки ручной<br>работы для дома</h1>
         </div>
         <div class="products-nav__main">
           <ul class="products-nav__list">
-            <li class="products-nav__item"><a class="products-nav__link" href="#">Предметы интерьера</a></li>
-            <li class="products-nav__item"><a class="products-nav__link" href="#">Детские игрушки</a></li>
+            <li class="products-nav__item">
+              <a class="products-nav__link products-nav__link--inter" href="#">
+                <img class="products-nav__image img-svg products-nav__image--inter" width="40" height="62" src="img/interior.svg.svg" alt="Лампа">
+                <span class="products-nav__text">Предметы интерьера</span>
+              </a>
+            </li>
+            <li class="products-nav__item">
+              <a class="products-nav__link products-nav__link--toys" href="#">
+                <img class="products-nav__image img-svg products-nav__image--toys" width="60" height="60" src="img/toy-svg.svg" alt="Кубик лего">
+                <span class="products-nav__text">Детские игрушки</span>
+              </a>
+            </li>
           </ul>
         </div>
       </section>
       <section class="featured-product">
-        <h2 class="featured-product__title">Вязаные корзинки</h2>
-        <h3 class="featured-product__subtitle">ТОВАР НЕДЕЛИ</h3>
-        <p class="featured-product__text">
-          Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
-        </p>
-        <table class="featured-product__table table-options">
-          <thead class="table-options__head">
-            <tr class="table-options__head-list">
-              <th class="table-options__head-item">Цвет:</th>
-              <th class="table-options__head-item">Диаметр:</th>
-              <th class="table-options__head-item">Высота:</th>
-              <th class="table-options__head-item">Цена:</th>
-            </tr>
-          </thead>
-          <tbody class="table-options__body">
-            <tr class="table-options__body-list">
-              <td class="table-options__body-item">«Тиффани»/серый</td>
-              <td class="table-options__body-item">25 см</td>
-              <td class="table-options__body-item">15 см</td>
-              <td class="table-options__body-item">990 руб.</td>
-            </tr>
-          </tbody>
-        </table>
-        <img class="featured-product__image" src="img/triple-set-mobile 1.svg" width="260" height="315" alt="Цветные корзинки">
-        <a class="featured-product__button button" href="#"><span class="button__text">заказать</span></a>
+        <div class="featured-product__wrapper">
+          <h2 class="featured-product__title">Вязаные корзинки</h2>
+          <h3 class="featured-product__subtitle">ТОВАР НЕДЕЛИ</h3>
+          <p class="featured-product__text">
+            Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+          </p>
+          <table class="featured-product__table table-options">
+            <thead class="table-options__head">
+              <tr class="table-options__head-list">
+                <th class="table-options__head-item">Цвет:</th>
+                <th class="table-options__head-item">Диаметр:</th>
+                <th class="table-options__head-item">Высота:</th>
+                <th class="table-options__head-item">Цена:</th>
+              </tr>
+            </thead>
+            <tbody class="table-options__body">
+              <tr class="table-options__body-list">
+                <td class="table-options__body-item">«Тиффани»/серый</td>
+                <td class="table-options__body-item">25 см</td>
+                <td class="table-options__body-item">15 см</td>
+                <td class="table-options__body-item">990 руб.</td>
+              </tr>
+            </tbody>
+          </table>
+          <img class="featured-product__image" src="img/triple-set-mobile 1.svg" width="260" height="315" alt="Цветные корзинки">
+          <a class="featured-product__button button" href="#"><span class="featured-product__button--text button__text">заказать</span></a>
+        </div>
       </section>
       <section class="advantages">
         <h2 class="advantages__title">Коротко о нас:</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--flower">
-            <p class="advantages__text ">Экологически чистые материалы</p>
+            <p class="advantages__text advantages__text--flower">Экологически чистые материалы</p>
           </li>
           <li class="advantages__item advantages__item--money">
-            <p class="advantages__text">Скандинавский стиль по российской цене</p>
+            <p class="advantages__text advantages__text--money">Скандинавский стиль по российской цене</p>
           </li>
           <li class="advantages__item advantages__item--like">
-            <p class="advantages__text">Увеличивает лайки на фотографиях</p>
+            <p class="advantages__text advantages__text--like">Увеличивает лайки на фотографиях</p>
           </li>
           <li class="advantages__item advantages__item--love">
-            <p class="advantages__text">Связано вручную с любовью и умилением</p>
+            <p class="advantages__text advantages__text--love">Связано вручную с любовью и умилением</p>
           </li>
           <li class="advantages__item advantages__item--rocket">
-            <p class="advantages__text">Поддержка отечественного производителя</p>
+            <p class="advantages__text advantages__text--rocket">Поддержка отечественного производителя</p>
           </li>
           <li class="advantages__item advantages__item--gift">
-            <p class="advantages__text">Поставляется в подарочной упаковке</p>
+            <p class="advantages__text advantages__text--gift">Поставляется в подарочной упаковке</p>
           </li>
         </ul>
       </section>
@@ -124,21 +147,24 @@
               </div>
             </li>
           </ul>
-          <button class="reviews__prev button-reviews" type="button">
-            <img class="reviews__prev-image" src="img/huge-arrow-left.svg.svg" width="50" height="26" alt="Предыдущий отзыв">
-          </button>
-          <button class="reviews__next button-reviews" type="button">
-            <img class="reviews__next-image" src="img/huge-arrow-right.svg.svg" width="50" height="26" alt="Следующий отзыв">
-          </button>
-          <a class="reviews__write button"><span class="button__text">Написать</span></a>
+          <div class="reviews__buttons">
+            <button class="reviews__prev button-reviews" type="button">
+              <img class="reviews__prev-image" src="img/huge-arrow-left.svg.svg" width="50" height="26" alt="Предыдущий отзыв">
+            </button>
+            <button class="reviews__next button-reviews" type="button">
+              <img class="reviews__next-image" src="img/huge-arrow-right.svg.svg" width="50" height="26" alt="Следующий отзыв">
+            </button>
+          </div>
+          <a class="reviews__write button"><span class="reviews__write--text button__text">Написать</span></a>
         </div>
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts__email"><span>e-mail:</span>info@mimimishkashop.ru</p>
-        <p class="contacts__address"><span>адрес:</span>г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</p>
+        <p class="contacts__email"><span class="contacts__name">e-mail:</span><a href="#" class="contacts__text contacts__link">info@mimimishkashop.ru</a></p>
+        <p class="contacts__address"><span class="contacts__name">адрес:</span><span class="contacts__text">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</span></p>
         <div class="contacts__map"></div>
-        <a class="contacts__write button"><span class="button__text">Напишите нам</span></a>
+        <img class="contacts__pin" width="67" height="100" src="img/map-pin.svg.svg" alt="Метка для карты">
+        <a class="contacts__write button"><span class="contacts__write-text button__text">Напишите нам</span></a>
       </section>
     </main>
     <footer class="page-footer">
@@ -147,17 +173,30 @@
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
-          <li class="social__item"><a href="#" class="social__link social__link--in">Instagram</a></li>
-          <li class="social__item"><a href="#" class="social__link social__link--fb">Facebook</a></li>
-          <li class="social__item"><a href="#" class="social__link social__link--tw">Twitter</a></li>
+          <li class="social__item">
+            <a href="#" class="social__link" title="Instagram">
+              <img class="social__image--in img-svg" width="22" height="22" src="img/insta.svg.svg" alt="Инстаграм">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link" title="Facebook">
+              <img class="social__image--fb img-svg" width="15" height="28" src="img/fb.svg.svg" alt="Фэйсбук">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link" title="Twitter">
+              <img class="social__image--tw img-svg" width="23" height="20" src="img/twitter.svg.svg" alt="Твиттер">
+            </a>
+          </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="#" alt="HTML Academy">
+          <b class="copyright__text">Разработано</b>
+          <img class="copyright__image img-svg" src="img/htmlacademy.svg.svg" width="27" height="35" alt="HTML Academy">
         </a>
       </div>
     </footer>
+    <script src="build/js/script.js"></script>
   </body>
 </html>
