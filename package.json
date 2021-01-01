@@ -13,6 +13,7 @@
     "coffeescript": "^2.5.1",
     "coffescript": "0.0.1-security",
     "del": "^6.0.0",
+    "glob": "^7.1.6",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-csscomb": "^3.1.0",

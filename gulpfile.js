@@ -14,6 +14,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var glob = require('glob');
 
 //Массив файлов для конкатенации стилей
 var cssFiles = [
@@ -89,11 +90,15 @@ function watch(){
 }*/
 
 function scripts(){
-  return browserify('./source/js/imgsvg.js')
+  var resultJS = glob.sync('./source/js/*.js');
+  return browserify({
+      entries: resultJS,
+      extensions: ['.jsx']
+  })
         .bundle()
         // Передаем имя файла, который получим на выходе, vinyl-source-stream
         .pipe(source('script.js'))
-        .pipe(gulp.dest('./build/js'));
+        .pipe(gulp.dest('./source/build/js'));
 }
 
 gulp.task('style', styles);
