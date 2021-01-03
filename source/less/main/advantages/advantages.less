@@ -1,3 +1,9 @@
+@advantagesTitle: 31px;
+@MarginLeftFlower: 39px;
+@MarginLeftLike: 38px;
+@MarginLeftLove: 34px;
+@MarginLeftRocket: 25px;
+
 .advantages {
   margin-top: 30px;
 }
@@ -8,7 +14,7 @@
 
   margin: 0;
   margin-bottom: 30px;
-  margin-left: 31px;
+  margin-left: percentage(@advantagesTitle/@width-pagePhone);//31px;
 
   font-style: normal;
   font-weight: bold;
@@ -34,7 +40,7 @@
   width: 33px;
   height: 38px;
   margin-bottom: 18px;
-  margin-left: 39px;
+  margin-left: percentage(@MarginLeftFlower/@width-pagePhone);//39px;
 
   background-image: url("../img/icon-1.svg.svg");
   background-repeat: no-repeat;
@@ -49,7 +55,7 @@
   width: 47px;
   height: 27px;
   margin-top: 30px;
-  margin-left: 31px;
+  margin-left: percentage(@advantagesTitle/@width-pagePhone);//31px;
 
   background-image: url("../img/icon-3.svg.svg");
   background-repeat: no-repeat;
@@ -64,7 +70,7 @@
   width: 34px;
   height: 27px;
   margin-top: 35px;
-  margin-left: 38px;
+  margin-left: percentage(@MarginLeftLike/@width-pagePhone);//38px;
 
   background-image: url("../img/icon-5.svg.svg");
   background-repeat: no-repeat;
@@ -79,7 +85,7 @@
   width: 35px;
   height: 34px;
   margin-top: 32px;
-  margin-left: 34px;
+  margin-left: percentage(@MarginLeftLove/@width-pagePhone);//34px;
 
   background-image: url("../img/icon-2.svg.svg");
   background-repeat: no-repeat;
@@ -94,7 +100,7 @@
   width: 55px;
   height: 23px;
   margin-top: 33px;
-  margin-left: 25px;
+  margin-left: percentage(@MarginLeftRocket/@width-pagePhone);//25px;
 
   background-image: url("../img/icon-4.svg.svg");
   background-repeat: no-repeat;
@@ -109,7 +115,7 @@
   width: 33px;
   height: 32px;
   margin-top: 32px;
-  margin-left: 34px;
+  margin-left: percentage(@MarginLeftLove/@width-pagePhone);//34px;
 
   background-image: url("../img/icon-6.svg.svg");
   background-repeat: no-repeat;
@@ -121,7 +127,7 @@
 
   width: 260px;
   margin: 0;
-  margin-left: 31px;
+  margin-left: percentage(@advantagesTitle/@width-pagePhone);//31px;
 
   font-style: normal;
   font-weight: bold;
