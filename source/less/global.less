@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @width-pagePhone: 320px;
+@mediaTablet: 768px;
+@mediaDesctop: 1150px;
 
 .page,
 .page__body {
@@ -10,13 +12,14 @@
 }
 
 .page {
+  display: grid;
   //background-image: url("../img/Mobile.png");
   background-repeat: no-repeat;
   background-position: 50%  -315px;
 }
 
 .page__body {
-  opacity: 0.6;
+  //opacity: 0.6;
 }
 
 .visually-hidden {
@@ -31,13 +34,4 @@
   border: 0;
 
   clip: rect(0 0 0 0);
-}
-
-.site-list__item:nth-child(3),
-.site-list__item:nth-child(4) {
-  display: none;
-}
-
-.page-header__text {
-  display: none;
 }
