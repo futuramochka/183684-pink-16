@@ -6,23 +6,30 @@
 @ProductImageToyRight: 27px;
 @heightImageBackground: 286px;
 
+//Разрешение экрана от 768px
+@PaddingButtonTablet: 50px;
+@WidthButtonBlockTablet: 334px;
+@HeightButtonBlockTablet: 119px;
+@PaddingTextButtonTablet: 36px;
 
 .products-nav {
   width: 100%;
   height: 100%;
 
-  &::after {
-    content: "\2063";
-    position: relative;
-    top: -80px;
-    z-index: 5;
+  @media (min-width: @mediaTablet) {
+    &::after {
+      content: "\2063";
+      position: relative;
+      top: -80px;
+      z-index: 5;
 
-    display: block;
-    max-width: 100%;
+      display: block;
+      max-width: 100%;
 
-    background-image: url("../../../img/zigzag-fill-desktop.svg.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+      background-image: url("../../../img/zigzag-fill-desktop.svg.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }
 
@@ -82,7 +89,7 @@
     z-index: 4;
 
     display: flex;
-    padding: 0 51px;
+    padding: 0 percentage(@PaddingButtonTablet/@mediaTablet);
   }
 }
 
@@ -91,8 +98,8 @@
   min-height: 103px;
 
   @media (min-width: @mediaTablet) {
-    width: 334px;
-    min-height: 119px;
+    width: percentage(@WidthButtonBlockTablet/(@mediaTablet - (@PaddingButtonTablet * 2)));//334px;
+    min-height: @HeightButtonBlockTablet;//119px;
   }
 }
 
@@ -114,7 +121,7 @@
   background-repeat: no-repeat;
 
   @media (min-width: @mediaTablet) {
-    width: inherit;
+    width: 100%;
     min-height: 119px;
     padding: 0;
 
@@ -169,8 +176,7 @@
   width: 130px;
   min-height: 48px;
   padding-top: 23px;
-  padding-left: 36px;
-
+  padding-left: percentage(@PaddingTextButtonTablet/@WidthButtonBlockTablet);//36px;
 
   letter-spacing: 1px;
 }
