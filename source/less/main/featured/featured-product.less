@@ -32,6 +32,15 @@
   width: percentage(@FeaturedProductWrapperWidth/@width-pagePhone);
   padding: 0 percentage(@PaddingWrapper/@width-pagePhone);
   padding-top: 30px;
+
+  @media (min-width: @mediaTablet) {
+    display: grid;
+    width: 668px;
+    margin-top: 40px;
+    padding: 0 50px;
+
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .featured-product__title {
@@ -43,6 +52,20 @@
   line-height: 30px;
   color: #000000;
   letter-spacing: 1.2px;
+
+  @media (min-width: @mediaTablet) {
+    //width: 450px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+.featured-product__title span {
+  @media (min-width: @mediaTablet) {
+    position: absolute;
+
+    width: 450px;
+  }
 }
 
 .featured-product__subtitle {
@@ -55,6 +78,16 @@
   line-height: 20px;
   color: #63d1bb;
   letter-spacing: 0.5px;
+
+  @media (min-width: @mediaTablet) {
+    width: 100px;
+
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+
+    justify-self: end;
+  }
 }
 
 .featured-product__text {
@@ -66,6 +99,21 @@
   font-size: 15px;
   line-height: 24px;
   color: #444444;
+
+  @media (min-width: @mediaTablet) {
+    width: 292px;
+    margin-top: 30px;
+    padding-top: 0;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.featured-product__table {
+  @media (min-width: @mediaTablet) {
+    grid-row: ~"3/4";
+  }
 }
 
 .table-options {
@@ -138,6 +186,19 @@
   line-height: 24px;
   color: #444444;
   letter-spacing: 2px;
+
+  @media (min-width: @mediaTablet) {
+    top: -33px;
+    right: 15px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.price__text,
+.price__title {
+  margin: 0;
 }
 
 .featured-product__image {
@@ -145,6 +206,16 @@
   bottom: 34px;
 
   width: 100%;
+
+  @media (min-width: @mediaTablet) {
+    bottom: 0;
+
+    height: 404px;
+    margin-top: 30px;
+
+    grid-column: ~"2/3";
+    grid-row: ~"2/5";
+  }
 }
 
 .image__item {
@@ -152,10 +223,23 @@
   max-width: 100%;
 
   object-fit: cover;
+
+  @media (min-width: @mediaTablet) {
+    height: 100%;
+  }
 }
 
 .featured-product__button {
   width: percentage(@widthButton/@FeaturedProductWrapperWidth);//256px;
   margin-top: 34px;
   margin-bottom: 40px;
+
+  @media (min-width: @mediaTablet) {
+    position: relative;
+    top: -50px;
+
+    width: 288px;
+    margin-top: 0;
+    margin-right: 42px;
+  }
 }
