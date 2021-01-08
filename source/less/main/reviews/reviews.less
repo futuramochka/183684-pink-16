@@ -4,6 +4,9 @@
 @WidthButtonWrite: 256px;
 @heightZigzag: 6px;
 
+//Для вьюпорта 768px
+@PaddingBlockReviews: 50px;
+
 .reviews {
   width: 100%;
   min-height: 627px;
@@ -41,7 +44,7 @@
 
   @media (min-width: @mediaTablet) {
     display: grid;
-    padding: 0 50px;
+    padding: 0 percentage(@PaddingBlockReviews/@mediaTablet);//50px;
   }
 }
 

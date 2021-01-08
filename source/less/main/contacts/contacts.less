@@ -10,6 +10,10 @@
   width: 100%;
   min-height: 500px;
   margin-top: 40px;
+
+  @media (min-width: @mediaTablet) {
+    display: grid;
+  }
 }
 
 .contacts__title {
@@ -25,6 +29,30 @@
   line-height: 30px;
   color: #000000;
   letter-spacing: 1px;
+
+  @media (min-width: @mediaTablet) {
+    margin-bottom: 49px;
+    padding: 0 50px;
+
+    font-size: 43px;
+    line-height: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -30px;
+      right: 0;
+
+      display: block;
+      width: 47px;
+      height: 81px;
+      margin-right: 50px;
+
+      background-image: url("../../../img/Vector.svg");
+      background-repeat: no-repeat;
+      background-size: 47px 81px;
+    }
+  }
 }
 
 .contacts__name {
@@ -46,6 +74,11 @@
   font-size: 14px;
   line-height: 30px;
   color: #444444;
+
+  @media (min-width: @mediaTablet) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .contacts__email {
@@ -54,12 +87,25 @@
   left: 2px;
 
   display: flex;
+
+  @media (min-width: @mediaTablet) {
+    padding-left: 50px;
+  }
 }
 
 .contacts__address {
   display: flex;
   margin-top: 42px;
   margin-bottom: 65px;
+
+  @media (min-width: @mediaTablet) {
+    margin: 0;
+    margin-top: -18px;
+    margin-left: 280px;
+    padding: 0;
+
+    justify-self: center;
+  }
 }
 
 .contacts__text {
@@ -67,6 +113,10 @@
   left: 30px;
 
   width: 183px;
+
+  @media (min-width: @mediaTablet) {
+    width: 257px;
+  }
 }
 
 .contacts__link {
@@ -88,6 +138,10 @@
   height: 1px;
 
   background-color: #62d1ba;
+
+  @media (min-width: @mediaTablet) {
+    width: 205px;
+  }
 }
 
 .contacts__email:hover > .contacts__text::after {
@@ -103,6 +157,12 @@
   background-repeat: no-repeat;
   background-position: 0 -30px;
   background-size: cover;
+
+  @media (min-width: @mediaTablet) {
+    padding-bottom: 457px;
+
+    background-image: url("../../../img/map-tablet@1x\ 1.svg");
+  }
 }
 
 .contacts__pin {
@@ -118,5 +178,11 @@
   width: percentage(@WidthBottonContacts/@width-pagePhone);//256px;
   margin: 0 percentage(@ContactsTitlePadding/@width-pagePhone);
   margin-bottom: 50px;
-  //margin-left: 30px;
+
+  @media (min-width: @mediaTablet) {
+    width: 226px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 57px;
+  }
 }
