@@ -4,6 +4,9 @@
 @MarginLeftLove: 34px;
 @MarginLeftRocket: 25px;
 
+//Для вьюпорта планшета 768px
+@MarginBlockAdvantages: 50px;
+
 .advantages {
   margin-top: 30px;
 }
@@ -22,6 +25,13 @@
   line-height: 30px;
   color: #000000;
   letter-spacing: 0.6px;
+
+  @media (min-width: @mediaTablet) {
+    margin: 0 percentage(@MarginBlockAdvantages/@mediaTablet);//50px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .advantages__list {
@@ -29,6 +39,25 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: @mediaTablet) {
+    display: grid;
+    margin: 0 percentage(@MarginBlockAdvantages/@mediaTablet);//50px;
+
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.advantages__item--money {
+  @media (min-width: @mediaTablet) {
+    grid-row: ~"2 / 3";
+  }
+}
+
+.advantages__item--like {
+  @media (min-width: @mediaTablet) {
+    grid-row: ~"3 / 4";
+  }
 }
 
 .advantages__item--flower::before {
@@ -44,6 +73,12 @@
 
   background-image: url("../img/icon-1.svg.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @mediaTablet) {
+    top: 41px;
+
+    margin: 0;
+  }
 }
 
 .advantages__item--money::before {
@@ -59,6 +94,11 @@
 
   background-image: url("../img/icon-3.svg.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @mediaTablet) {
+    margin: 0;
+    margin-top: 57px;
+  }
 }
 
 .advantages__item--like::before {
@@ -74,6 +114,11 @@
 
   background-image: url("../img/icon-5.svg.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @mediaTablet) {
+    margin: 0;
+    margin-top: 63px;
+  }
 }
 
 .advantages__item--love::before {
@@ -89,6 +134,11 @@
 
   background-image: url("../img/icon-2.svg.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @mediaTablet) {
+    margin: 0;
+    margin-top: 45px;
+  }
 }
 
 .advantages__item--rocket::before {
@@ -104,6 +154,11 @@
 
   background-image: url("../img/icon-4.svg.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @mediaTablet) {
+    margin: 0;
+    margin-top: 59px;
+  }
 }
 
 .advantages__item--gift::before {
@@ -119,6 +174,11 @@
 
   background-image: url("../img/icon-6.svg.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @mediaTablet) {
+    margin: 0;
+    margin-top: 58px;
+  }
 }
 
 .advantages__text {
@@ -134,6 +194,19 @@
   font-size: 17px;
   line-height: 20px;
   color: inherit;
+
+  @media (min-width: @mediaTablet) {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.advantages__text--flower {
+  @media (min-width: @mediaTablet) {
+    margin-top: 56px;
+  }
 }
 
 .advantages__text--money {
@@ -146,12 +219,25 @@
 
 .advantages__text--love {
   margin-top: 17px;
+
+  @media (min-width: @mediaTablet) {
+    margin-top: 19px;
+  }
 }
 
 .advantages__text--rocket {
   margin-top: 26px;
+
+  @media (min-width: @mediaTablet) {
+    width: 325px;
+    margin-top: 28px;
+  }
 }
 
 .advantages__text--gift {
   margin-top: 20px;
+
+  @media (min-width: @mediaTablet) {
+    margin-top: 21px;
+  }
 }
