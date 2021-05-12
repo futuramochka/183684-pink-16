@@ -32,6 +32,6 @@
     "node": "8.15"
   },
   "dependencies": {
-    "postcss": "^8.2.1"
+    "postcss": "^8.2.10"
   }
 }
